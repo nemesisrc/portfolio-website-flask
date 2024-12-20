@@ -4,15 +4,31 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 app = Flask(__name__)
 
 #routing endpoints for the flask application
-@app.route('/') #home page route
+#routing the home page
+@app.route('/') 
 def homepage():
     return render_template('index.html')
 
-@app.route('/about') #about page route
-def about():
-    return render_template('about.html')
+#routing the about page
+@app.route('/landing') 
+def landing():
+    return render_template('landing.html')
 
+#routing the blog page
+@app.route('/generic') 
+def generic():
+    return render_template('generic.html')
+
+#routing the blog page
+@app.route('/elements') 
+def elements():
+    return render_template('elements.html')
+
+#routing the blog page
+@app.route('/home') 
+def home():
+    return redirect('/')
 
 #run the flask application
 if __name__=="__main__":
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=8080)

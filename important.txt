@@ -1,0 +1,4 @@
+i. homepage - about me
+ii. experience - landing
+iii. my-projects - generic
+iv. education - elements
